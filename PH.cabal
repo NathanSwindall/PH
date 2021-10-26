@@ -1,0 +1,93 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 815b8f9f8148288aab5eeb608df53fea02bb8b61be581a060ade3e32d7448b1a
+
+name:           PH
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/PH#readme>
+homepage:       https://github.com/githubuser/PH#readme
+bug-reports:    https://github.com/githubuser/PH/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/PH
+
+library
+  exposed-modules:
+      Chapter2.DataTypes
+      Chapter2.DefaultValues
+      Chapter2.ListsAndTuples
+      Chapter2.PatternMatching
+      Chapter2.Records
+      Chapter2.Test
+      Chapter2.ViewPatterns
+      Chapter3.AnonymousFunctions
+      Chapter3.FunctionsAsParameters
+      Chapter3.ParametricPolymorphism
+      Chapter3.SmartConstructors
+      Chapter3.SmartConstructors2
+      Chapter4.BinaryTrees
+      Chapter4.Classes
+      Chapter4.Classes2
+      Chapter4.Monoids
+      Chapter4.Pokemon
+      Chapter4.Pokemon2
+      Chapter6.DataMining
+      Chapter6.DataMining2
+      Chapter6.DiscoveringMonads
+      Chapter6.Lenses
+      Chapter6.Monads
+      Chapter6.Test
+  other-modules:
+      Paths_PH
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , microlens-platform
+  default-language: Haskell2010
+
+executable PH-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PH
+    , base >=4.7 && <5
+    , containers
+    , microlens-platform
+  if false
+    other-modules:
+        Paths_PH
+  default-language: Haskell2010
+
+test-suite PH-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PH
+    , base >=4.7 && <5
+    , containers
+    , microlens-platform
+  if false
+    other-modules:
+        Paths_PH
+  default-language: Haskell2010
